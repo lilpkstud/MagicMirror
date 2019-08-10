@@ -20,7 +20,7 @@ Module.register("currentweather",{
 		timeFormat: config.timeFormat,
 		showPeriod: true,
 		showPeriodUpper: false,
-		showWindDirection: true,
+		showWindDirection: false,
 		showWindDirectionAsArrow: false,
 		useBeaufort: true,
 		appendLocationNameToHeader: false,
@@ -121,7 +121,7 @@ Module.register("currentweather",{
 		var small = document.createElement("div");
 		small.className = "normal medium";
 
-		var windIcon = document.createElement("span");
+		/*var windIcon = document.createElement("span");
 		windIcon.className = "wi wi-strong-wind dimmed";
 		small.appendChild(windIcon);
 
@@ -139,7 +139,7 @@ Module.register("currentweather",{
 				windDirection.innerHTML = " " + this.translate(this.windDirection);
 			}
 			small.appendChild(windDirection);
-		}
+		}*/
 		var spacer = document.createElement("span");
 		spacer.innerHTML = "&nbsp;";
 		small.appendChild(spacer);
@@ -161,12 +161,13 @@ Module.register("currentweather",{
 		}
 
 		var sunriseSunsetIcon = document.createElement("span");
+		//sunriseSunsetIcon.innerHTML = "Sunrise";
 		sunriseSunsetIcon.className = "wi dimmed " + this.sunriseSunsetIcon;
 		small.appendChild(sunriseSunsetIcon);
 
 		var sunriseSunsetTime = document.createElement("span");
 		sunriseSunsetTime.innerHTML = " " + this.sunriseSunsetTime;
-		small.appendChild(sunriseSunsetTime);
+		small.appendChild( sunriseSunsetTime);
 
 		wrapper.appendChild(small);
 	},
@@ -396,7 +397,7 @@ Module.register("currentweather",{
 		} else if (this.config.useKMPHwind) {
 			this.windSpeed = parseFloat((data.wind.speed * 60 * 60) / 1000).toFixed(0);
 		} else {
-			this.windSpeed = parseFloat(data.wind.speed).toFixed(0);
+			//this.windSpeed = parseFloat(data.wind.speed).toFixed(0);
 		}
 
 		// ONLY WORKS IF TEMP IN C //
