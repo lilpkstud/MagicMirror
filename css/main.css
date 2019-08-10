@@ -1,7 +1,8 @@
 html {
-  cursor: none;
+  /*cursor: none;*/
   overflow: hidden;
-  background: #000;
+  /*background: #000;*/
+  background: goldenrod;
 }
 
 ::-webkit-scrollbar {
@@ -13,8 +14,10 @@ body {
   position: absolute;
   height: calc(100% - 120px);
   width: calc(100% - 120px);
-  background: #000;
-  color: #aaa;
+  /*background: #000;*/
+  background: goldenrod;
+  /*color: #aaa;*/
+  color: ghostwhite;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
   font-size: 2em;
@@ -27,15 +30,18 @@ body {
  */
 
 .dimmed {
-  color: #666;
+  /*color: #666;*/
+  color: ghostwhite;
 }
 
 .normal {
-  color: #999;
+  /*color: #999;*/
+  color: ghostwhite;
 }
 
 .bright {
-  color: #fff;
+  /*color: #fff;*/
+  color: ghostwhite;
 }
 
 .xsmall {
@@ -67,6 +73,7 @@ body {
 .thin {
   font-family: Roboto, sans-serif;
   font-weight: 100;
+  line-height: 0.9em;
 }
 
 .light {
